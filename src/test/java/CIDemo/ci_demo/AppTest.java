@@ -1,5 +1,6 @@
 package CIDemo.ci_demo;
 
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,8 +13,14 @@ public class AppTest
 	@Test
 	public void AppTest1()
     {
-        System.out.println("hello test 1");
-        Assert.fail("failure");
+		//Login and go to google
+		System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		
+		driver.get("http://www.google.com");
+		System.out.println("hello test 1");
+        
+		Assert.fail("failure");
     }
 
 	@Test
