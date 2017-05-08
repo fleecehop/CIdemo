@@ -13,7 +13,7 @@ public class AppTest
 	public void AppTest1()
     {
         System.out.println("hello test 1");
-        Assert.fail();
+        Assert.fail("failure");
     }
 
 	@Test
